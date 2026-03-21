@@ -28,15 +28,6 @@ Anant_homeopathy_clinic/
 │       └── visiting-card.jpeg
 └── README.md               # This file
 ```
-
----
-
-## IMPORTANT: Doctor Photo Setup
-
-Save the doctor's photo as `assets/images/doctor.jpg` in the project. This image appears in:
-- Hero section (circular image)
-- About section (doctor profile)
-
 ---
 
 ## How to Add / Edit Content
