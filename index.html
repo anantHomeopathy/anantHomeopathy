@@ -15,6 +15,7 @@
     <title>અનંત હોમિયોપેથી ક્લિનિક | ડૉ. જીગ્નેશ મકવાણા | સુરત</title>
     <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/translations.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,23 +30,63 @@
         <a href="#home" class="logo">
           <img src="assets/images/logo.jpeg" alt="અનંત હોમિયોપેથી લોગો" />
           <div class="logo-text">
-            <span class="logo-name">અનંત</span>
-            <span class="logo-sub">HOMOEOPATHY</span>
+            <span class="logo-name" data-i18n="logo_name">અનંત</span>
+            <span class="logo-sub" data-i18n="logo_sub">હોમિયોપેથી</span>
           </div>
         </a>
         <nav id="navbar">
           <ul>
-            <li><a href="#home" class="nav-link active">હોમ</a></li>
-            <li><a href="#about" class="nav-link">અમારા વિશે</a></li>
-            <li><a href="#services" class="nav-link">સેવાઓ</a></li>
-            <li><a href="#blog" class="nav-link">બ્લોગ</a></li>
-            <li><a href="#videos" class="nav-link">વિડિયો</a></li>
-            <li><a href="#reels" class="nav-link">રીલ્સ</a></li>
-            <li><a href="#testimonials" class="nav-link">પ્રતિભાવ</a></li>
-            <li><a href="#contact" class="nav-link">સંપર્ક</a></li>
+            <li>
+              <a href="#home" class="nav-link active" data-i18n="nav_home"
+                >હોમ</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav-link" data-i18n="nav_about"
+                >અમારા વિશે</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="nav-link" data-i18n="nav_services"
+                >સેવાઓ</a
+              >
+            </li>
+            <li>
+              <a href="#blog" class="nav-link" data-i18n="nav_blog">બ્લોગ</a>
+            </li>
+            <li>
+              <a href="#videos" class="nav-link" data-i18n="nav_videos"
+                >વિડિયો</a
+              >
+            </li>
+            <li>
+              <a href="#reels" class="nav-link" data-i18n="nav_reels">રીલ્સ</a>
+            </li>
+            <li>
+              <a
+                href="#testimonials"
+                class="nav-link"
+                data-i18n="nav_testimonials"
+                >પ્રતિભાવ</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link" data-i18n="nav_contact"
+                >સંપર્ક</a
+              >
+            </li>
           </ul>
         </nav>
-        <a href="#appointment" class="btn btn-primary nav-btn">એપોઇન્ટમેન્ટ</a>
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-btn active" data-lang="gu">ગુજ</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a
+          href="#appointment"
+          class="btn btn-primary nav-btn"
+          data-i18n="nav_appointment"
+          >એપોઇન્ટમેન્ટ</a
+        >
         <button
           class="mobile-toggle"
           id="mobileToggle"
@@ -61,31 +102,47 @@
       <div class="hero-bg"></div>
       <div class="container hero-content">
         <div class="hero-text">
-          <p class="hero-tag">સ્વાગત છે</p>
-          <h1>અનંત હોમિયોપેથી <span>ક્લિનિક</span></h1>
-          <p class="hero-desc">
-            કુદરતી ઉપચારની શક્તિ અનુભવો. અમે ક્રોનિક અને એક્યુટ રોગો માટે
-            સુરક્ષિત, સૌમ્ય અને અસરકારક હોમિયોપેથિક સારવાર વ્યક્તિગત કાળજી સાથે
-            આપીએ છીએ.
+          <p class="hero-tag" data-i18n="hero_tag">સ્વાગત છે</p>
+          <h1>
+            <span data-i18n="hero_title">અનંત હોમિયોપેથી</span>
+            <span data-i18n="hero_title_span">ક્લિનિક</span>
+          </h1>
+          <p class="hero-desc" data-i18n="hero_desc">
+            હવે વર્ષો જૂના રોગોથી છૂટકારો મળશે, સુરક્ષિત અને સાઇડ ઇફેક્ટ વગર
+            હોમિયોપેથી સારવાર.
           </p>
           <div class="hero-buttons">
-            <a href="#appointment" class="btn btn-primary"
+            <a
+              href="#appointment"
+              class="btn btn-primary"
+              data-i18n="hero_btn_appointment"
               >એપોઇન્ટમેન્ટ બુક કરો</a
             >
-            <a href="#services" class="btn btn-outline">અમારી સેવાઓ</a>
+            <a
+              href="#services"
+              class="btn btn-outline"
+              data-i18n="hero_btn_services"
+              >અમારી સેવાઓ</a
+            >
           </div>
           <div class="hero-stats">
             <div class="stat">
               <span class="stat-num">1000+</span>
-              <span class="stat-label">ખુશ દર્દીઓ</span>
+              <span class="stat-label" data-i18n="stat_patients"
+                >ખુશ દર્દીઓ</span
+              >
             </div>
             <div class="stat">
-              <span class="stat-num">10+</span>
-              <span class="stat-label">વર્ષનો અનુભવ</span>
+              <span class="stat-num">9+</span>
+              <span class="stat-label" data-i18n="stat_experience"
+                >વર્ષનો અનુભવ</span
+              >
             </div>
             <div class="stat">
               <span class="stat-num">15+</span>
-              <span class="stat-label">વિશેષતાઓ</span>
+              <span class="stat-label" data-i18n="stat_specialties"
+                >વિશેષતાઓ</span
+              >
             </div>
           </div>
         </div>
@@ -101,12 +158,68 @@
       </div>
     </section>
 
+    <!-- ========== DOCTOR'S SPECIALTY SECTION ========== -->
+    <section id="specialties" class="section specialties-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag" data-i18n="specialty_tag">ડૉક્ટરની વિશેષતા</p>
+          <h2>
+            <span data-i18n="specialty_title_1">અમારી</span>
+            <span data-i18n="specialty_title_span">વિશેષ સારવાર</span>
+          </h2>
+          <p class="section-desc specialty-desc" data-i18n="specialty_desc">
+            ડૉ. જીગ્નેશ મકવાણાની વિશેષ સારવાર જુઓ — દર્દીઓના અનુભવ અને પરિણામો સાથે.
+          </p>
+        </div>
+        <div class="specialties-grid">
+          <!-- Allergy Card -->
+          <div class="specialty-card reveal">
+            <div class="specialty-icon">🤧</div>
+            <h3 data-i18n="specialty_allergy_title">એલર્જી સારવાર</h3>
+            <p class="specialty-card-desc" data-i18n="specialty_allergy_desc">
+              હોમિયોપેથીક દવાઓ એલર્જીના મૂળ કારણની સારવાર કરે છે — કોઈ આડઅસર વિના કાયમી રાહત.
+            </p>
+            <div class="specialty-reel">
+              <iframe
+                src="https://www.instagram.com/reel/DWBGmS9gVAw/embed"
+                title="Allergy Treatment Reel"
+                allowfullscreen
+                loading="lazy"
+                scrolling="no"
+              ></iframe>
+            </div>
+          </div>
+          <!-- Migraine Card -->
+          <div class="specialty-card reveal">
+            <div class="specialty-icon">🧠</div>
+            <h3 data-i18n="specialty_migraine_title">માઈગ્રેન સારવાર</h3>
+            <p class="specialty-card-desc" data-i18n="specialty_migraine_desc">
+              પેઇનકિલર વિના માઈગ્રેનથી કાયમી છૂટકારો — હોમિયોપેથી દ્વારા કુદરતી ઉપચાર.
+            </p>
+            <div class="specialty-reel">
+              <iframe
+                src="https://www.instagram.com/reel/DVviEzgAes8/embed"
+                title="Migraine Treatment Reel"
+                allowfullscreen
+                loading="lazy"
+                scrolling="no"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== ABOUT SECTION ========== -->
     <section id="about" class="section about">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">અમારા વિશે</p>
-          <h2>તમારા <span>ડૉક્ટર</span>ને મળો</h2>
+          <p class="section-tag" data-i18n="about_tag">અમારા વિશે</p>
+          <h2>
+            <span data-i18n="about_title_1">તમારા</span>
+            <span data-i18n="about_title_span">ડૉક્ટર</span
+            ><span data-i18n="about_title_2">ને મળો</span>
+          </h2>
         </div>
         <div class="about-grid">
           <div class="about-image">
@@ -117,31 +230,31 @@
                 onerror="this.src = 'assets/images/logo.jpeg'"
               />
               <div class="experience-badge">
-                <span class="exp-num">10+</span>
-                <span class="exp-text">વર્ષનો અનુભવ</span>
+                <span class="exp-num">9+</span>
+                <span class="exp-text" data-i18n="exp_text">વર્ષનો અનુભવ</span>
               </div>
             </div>
           </div>
           <div class="about-content">
-            <h3>ડૉ. જીગ્નેશ મકવાણા</h3>
-            <p class="doctor-title">
+            <h3 data-i18n="doctor_name">ડૉ. જીગ્નેશ મકવાણા</h3>
+            <p class="doctor-title" data-i18n="doctor_title">
               B.H.M.S. (કન્સલ્ટિંગ હોમિયોપેથ) | S.C.P.H. (ICHM United Nation)
             </p>
-            <p>
+            <p data-i18n="about_p1">
               ડૉ. જીગ્નેશ મકવાણા એક સમર્પિત અને અનુભવી હોમિયોપેથિક ચિકિત્સક છે
               જે સર્વગ્રાહી અને વ્યક્તિગત આરોગ્ય સંભાળ પૂરી પાડવા માટે પ્રતિબદ્ધ
               છે. ક્લાસિકલ હોમિયોપેથીમાં મજબૂત આધાર અને વર્ષોના ક્લિનિકલ અનુભવ
               સાથે, તેઓ ક્રોનિક રોગો, એલર્જી, માઈગ્રેન અને લાંબા ગાળાની સારવારની
               જરૂર હોય તેવી બીમારીઓમાં નિષ્ણાત છે.
             </p>
-            <p>
+            <p data-i18n="about_p2">
               અનંત હોમિયોપેથી ક્લિનિકમાં, અમે રોગના લક્ષણો નહીં, પરંતુ મૂળ
               કારણની સારવાર કરીએ છીએ. અમારો અભિગમ પરંપરાગત હોમિયોપેથિક
               સિદ્ધાંતોને આધુનિક ડાયગ્નોસ્ટિક સમજ સાથે જોડીને અસરકારક,
               આડઅસર-મુક્ત સારવાર આપે છે.
             </p>
             <p>
-              <strong
+              <strong data-i18n="about_p3"
                 >સુરતની બહારના દર્દીઓ માટે ઓનલાઇન કન્સલ્ટેશનની સુવિધા ઉપલબ્ધ
                 છે.</strong
               >
@@ -149,22 +262,26 @@
             <div class="about-highlights">
               <div class="highlight">
                 <div class="highlight-icon">&#9745;</div>
-                <span>ક્લાસિકલ હોમિયોપેથી</span>
+                <span data-i18n="highlight_classical">ક્લાસિકલ હોમિયોપેથી</span>
               </div>
               <div class="highlight">
                 <div class="highlight-icon">&#9745;</div>
-                <span>વ્યક્તિગત સારવાર યોજના</span>
+                <span data-i18n="highlight_personalized"
+                  >વ્યક્તિગત સારવાર યોજના</span
+                >
               </div>
               <div class="highlight">
                 <div class="highlight-icon">&#9745;</div>
-                <span>સુરક્ષિત અને આડઅસર-મુક્ત</span>
+                <span data-i18n="highlight_safe">સુરક્ષિત અને આડઅસર-મુક્ત</span>
               </div>
               <div class="highlight">
                 <div class="highlight-icon">&#9745;</div>
-                <span>ક્રોનિક રોગ નિષ્ણાત</span>
+                <span data-i18n="highlight_expert">ક્રોનિક રોગ નિષ્ણાત</span>
               </div>
             </div>
-            <a href="#appointment" class="btn btn-primary">પરામર્શ લો</a>
+            <a href="#appointment" class="btn btn-primary" data-i18n="about_btn"
+              >પરામર્શ લો</a
+            >
           </div>
         </div>
       </div>
@@ -174,9 +291,12 @@
     <section id="services" class="section services">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">અમારી વિશેષતાઓ</p>
-          <h2>સારવાર કોના <span>માટે છે?</span></h2>
-          <p class="section-desc">
+          <p class="section-tag" data-i18n="services_tag">અમારી વિશેષતાઓ</p>
+          <h2>
+            <span data-i18n="services_title_1">સારવાર કોના</span>
+            <span data-i18n="services_title_span">માટે છે?</span>
+          </h2>
+          <p class="section-desc" data-i18n="services_desc">
             અમે તીવ્ર અને ક્રોનિક રોગોની વિશાળ શ્રેણી માટે અસરકારક હોમિયોપેથિક
             સારવાર આપીએ છીએ.
           </p>
@@ -184,92 +304,93 @@
 
         <div class="services-category">
           <h3 class="category-title">
-            <span class="cat-num">01</span> ઓપરેશન ના કરવું હોય
+            <span class="cat-num">01</span>
+            <span data-i18n="cat2_title">લાંબા સમયથી દવાઓ લેતા હોય</span>
           </h3>
           <div class="services-grid">
             <div class="service-card">
-              <div class="service-icon">&#129466;</div>
-              <h4>સાંધાના રોગ</h4>
-              <p>
-                આર્થરાઈટિસ, સાંધાનો દુખાવો અને હાડકાં-સ્નાયુની બીમારીઓની ઓપરેશન
-                વિના અસરકારક સારવાર.
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">&#127973;</div>
-              <h4>ગર્ભાશયની બિમારી</h4>
-              <p>
-                ફાઈબ્રોઈડ, PCOS અને અન્ય સ્ત્રીરોગ સંબંધિત બીમારીઓની હોમિયોપેથિક
-                સારવાર.
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">&#129516;</div>
-              <h4>કમરનો રોગ</h4>
-              <p>
-                ક્રોનિક કમરનો દુખાવો, ડિસ્ક સમસ્યાઓ અને કરોડરજ્જુની બીમારીઓની
-                ઓપરેશન વિના સારવાર.
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">&#128138;</div>
-              <h4>હરસ-મસા</h4>
-              <p>
-                હરસ, ફિશર અને ફિસ્ટુલાની ઓપરેશન વિના સુરક્ષિત અને અસરકારક
-                સારવાર.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="services-category">
-          <h3 class="category-title">
-            <span class="cat-num">02</span> લાંબા સમયથી દવાઓ લેતા હોય
-          </h3>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-icon">&#129504;</div>
-              <h4>માઈગ્રેન</h4>
-              <p>
+              <div class="service-icon">🤕</div>
+              <h4 data-i18n="svc_migraine">માઈગ્રેન</h4>
+              <p data-i18n="svc_migraine_desc">
                 ક્રોનિક માઈગ્રેન, ટેન્શન માથાનો દુખાવો અને ક્લસ્ટર માથાના
                 દુખાવામાંથી કાયમી રાહત.
               </p>
             </div>
             <div class="service-card">
-              <div class="service-icon">&#127788;</div>
-              <h4>એલર્જી-અસ્થમા</h4>
-              <p>
+              <div class="service-icon">🤧</div>
+              <h4 data-i18n="svc_allergy">એલર્જી-અસ્થમા</h4>
+              <p data-i18n="svc_allergy_desc">
                 શ્વાસની એલર્જી, ચામડીની એલર્જી અને અસ્થમાની મૂળ કારણની સારવાર.
               </p>
             </div>
             <div class="service-card">
-              <div class="service-icon">&#129776;</div>
-              <h4>પેટના રોગો</h4>
-              <p>
+              <div class="service-icon">🔥</div>
+              <h4 data-i18n="svc_stomach">પેટના રોગો</h4>
+              <p data-i18n="svc_stomach_desc">
                 IBS, એસિડિટી, ગેસ્ટ્રાઈટિસ અને ક્રોનિક પેટની બીમારીઓની સારવાર.
               </p>
             </div>
             <div class="service-card">
-              <div class="service-icon">&#128150;</div>
-              <h4>માનસીક રોગ</h4>
-              <p>
+              <div class="service-icon">🧠</div>
+              <h4 data-i18n="svc_mental">માનસીક રોગ</h4>
+              <p data-i18n="svc_mental_desc">
                 ચિંતા, ડિપ્રેશન, સ્ટ્રેસ અને વર્તન સંબંધિત બીમારીઓની સર્વગ્રાહી
                 સારવાર.
               </p>
             </div>
             <div class="service-card">
-              <div class="service-icon">&#127807;</div>
-              <h4>સ્ત્રી રોગ</h4>
-              <p>
+              <div class="service-icon">👩‍⚕️</div>
+              <h4 data-i18n="svc_gynec">સ્ત્રી રોગ</h4>
+              <p data-i18n="svc_gynec_desc">
                 માસિક ધર્મની સમસ્યાઓ, હોર્મોનલ અસંતુલન અને વંધ્યત્વની વિશેષ
                 સારવાર.
               </p>
             </div>
             <div class="service-card">
-              <div class="service-icon">&#129528;</div>
-              <h4>ચામડીના રોગ</h4>
-              <p>
+              <div class="service-icon">🩹</div>
+              <h4 data-i18n="svc_skin">ચામડીના રોગ</h4>
+              <p data-i18n="svc_skin_desc">
                 ખરજવું, સોરાયસિસ, વિટિલિગો, ખીલ અને ફંગલ ઈન્ફેક્શનની અસરકારક
+                સારવાર.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="services-category">
+          <h3 class="category-title">
+            <span class="cat-num">02</span>
+            <span data-i18n="cat1_title">ઓપરેશન ના કરવું હોય</span>
+          </h3>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🦴</div>
+              <h4 data-i18n="svc_joints">સાંધાના રોગ</h4>
+              <p data-i18n="svc_joints_desc">
+                આર્થરાઈટિસ, સાંધાનો દુખાવો અને હાડકાં-સ્નાયુની બીમારીઓની ઓપરેશન
+                વિના અસરકારક સારવાર.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🩺</div>
+              <h4 data-i18n="svc_uterus">ગર્ભાશયની બિમારી</h4>
+              <p data-i18n="svc_uterus_desc">
+                ફાઈબ્રોઈડ, PCOS અને અન્ય સ્ત્રીરોગ સંબંધિત બીમારીઓની હોમિયોપેથિક
+                સારવાર.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🏋️</div>
+              <h4 data-i18n="svc_back">કમરનો રોગ</h4>
+              <p data-i18n="svc_back_desc">
+                ક્રોનિક કમરનો દુખાવો, ડિસ્ક સમસ્યાઓ અને કરોડરજ્જુની બીમારીઓની
+                ઓપરેશન વિના સારવાર.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💊</div>
+              <h4 data-i18n="svc_piles">હરસ-મસા</h4>
+              <p data-i18n="svc_piles_desc">
+                હરસ, ફિશર અને ફિસ્ટુલાની ઓપરેશન વિના સુરક્ષિત અને અસરકારક
                 સારવાર.
               </p>
             </div>
@@ -282,38 +403,41 @@
     <section class="section why-us">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">અમને શા માટે પસંદ કરો</p>
-          <h2>શા માટે <span>અનંત હોમિયોપેથી?</span></h2>
+          <p class="section-tag" data-i18n="why_tag">અમને શા માટે પસંદ કરો</p>
+          <h2>
+            <span data-i18n="why_title_1">શા માટે</span>
+            <span data-i18n="why_title_span">અનંત હોમિયોપેથી?</span>
+          </h2>
         </div>
         <div class="why-grid">
           <div class="why-card">
             <div class="why-icon">&#127793;</div>
-            <h4>કુદરતી ઉપચાર</h4>
-            <p>
+            <h4 data-i18n="why_natural">કુદરતી ઉપચાર</h4>
+            <p data-i18n="why_natural_desc">
               100% કુદરતી દવાઓ, કોઈ આડઅસર નહીં. બાળકો અને વૃદ્ધો સહિત તમામ
               ઉંમરના લોકો માટે સુરક્ષિત.
             </p>
           </div>
           <div class="why-card">
             <div class="why-icon">&#128100;</div>
-            <h4>વ્યક્તિગત સારવાર</h4>
-            <p>
+            <h4 data-i18n="why_personalized">વ્યક્તિગત સારવાર</h4>
+            <p data-i18n="why_personalized_desc">
               દરેક દર્દીને તેમની અનન્ય પ્રકૃતિ અને લક્ષણોના આધારે વ્યક્તિગત
               સારવાર મળે છે.
             </p>
           </div>
           <div class="why-card">
             <div class="why-icon">&#127919;</div>
-            <h4>મૂળ કારણની સારવાર</h4>
-            <p>
+            <h4 data-i18n="why_root">મૂળ કારણની સારવાર</h4>
+            <p data-i18n="why_root_desc">
               અમે ફક્ત લક્ષણોને દબાવવા પર નહીં, પરંતુ રોગના મૂળ કારણને દૂર કરવા
               પર ધ્યાન કેન્દ્રિત કરીએ છીએ.
             </p>
           </div>
           <div class="why-card">
             <div class="why-icon">&#128336;</div>
-            <h4>અનુભવી ડૉક્ટર</h4>
-            <p>
+            <h4 data-i18n="why_experienced">અનુભવી ડૉક્ટર</h4>
+            <p data-i18n="why_experienced_desc">
               ડૉ. જીગ્નેશ મકવાણા પાસે ક્લાસિકલ હોમિયોપેથીમાં એક દાયકાથી વધુનો
               ક્લિનિકલ અનુભવ છે.
             </p>
@@ -326,15 +450,18 @@
     <section id="blog" class="section blog-section">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">આરોગ્ય ટિપ્સ અને લેખ</p>
-          <h2>અમારો <span>બ્લોગ</span></h2>
-          <p class="section-desc">
+          <p class="section-tag" data-i18n="blog_tag">આરોગ્ય ટિપ્સ અને લેખ</p>
+          <h2>
+            <span data-i18n="blog_title_1">અમારો</span>
+            <span data-i18n="blog_title_span">બ્લોગ</span>
+          </h2>
+          <p class="section-desc" data-i18n="blog_desc">
             આરોગ્ય, હોમિયોપેથી અને સુખાકારી વિશેના અમારા નવીનતમ લેખ વાંચો.
           </p>
         </div>
         <div class="blog-grid" id="blogGrid"></div>
         <div class="blog-empty" id="blogEmpty" style="display: none">
-          <p>નવા લેખ ટૂંક સમયમાં આવી રહ્યા છે!</p>
+          <p data-i18n="blog_empty">નવા લેખ ટૂંક સમયમાં આવી રહ્યા છે!</p>
         </div>
       </div>
     </section>
@@ -343,16 +470,19 @@
     <section id="videos" class="section videos-section">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">જુઓ અને શીખો</p>
-          <h2>આરોગ્ય <span>વિડિયો</span></h2>
-          <p class="section-desc">
+          <p class="section-tag" data-i18n="videos_tag">જુઓ અને શીખો</p>
+          <h2>
+            <span data-i18n="videos_title_1">આરોગ્ય</span>
+            <span data-i18n="videos_title_span">વિડિયો</span>
+          </h2>
+          <p class="section-desc" data-i18n="videos_desc">
             હોમિયોપેથિક સારવાર અને આરોગ્ય ટિપ્સ વિશેના અમારા માહિતીપ્રદ વિડિયો
             જુઓ.
           </p>
         </div>
         <div class="videos-grid" id="videosGrid"></div>
         <div class="videos-empty" id="videosEmpty" style="display: none">
-          <p>વિડિયો ટૂંક સમયમાં આવશે!</p>
+          <p data-i18n="videos_empty">વિડિયો ટૂંક સમયમાં આવશે!</p>
         </div>
       </div>
     </section>
@@ -361,10 +491,12 @@
     <section id="reels" class="section reels-section">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">Instagram રીલ્સ</p>
-          <h2>અમારી <span>રીલ્સ</span></h2>
+          <p class="section-tag" data-i18n="reels_tag">Instagram રીલ્સ</p>
+          <h2>
+            <span data-i18n="reels_title_1">અમારા દર્દીઓનો અનુભવ</span>
+          </h2>
           <p class="section-desc">
-            Instagram પર અમને ફૉલો કરો
+            <span data-i18n="reels_desc">Instagram પર અમને ફૉલો કરો</span>
             <a
               href="https://www.instagram.com/anant_homoeopathy"
               target="_blank"
@@ -375,7 +507,7 @@
         </div>
         <div class="reels-grid" id="reelsGrid"></div>
         <div class="reels-empty" id="reelsEmpty" style="display: none">
-          <p>રીલ્સ ટૂંક સમયમાં આવશે!</p>
+          <p data-i18n="reels_empty">રીલ્સ ટૂંક સમયમાં આવશે!</p>
         </div>
       </div>
     </section>
@@ -384,10 +516,17 @@
     <section id="testimonials" class="section testimonials">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">દર્દીઓના પ્રતિભાવ</p>
-          <h2>અમારા દર્દીઓ <span>શું કહે છે</span></h2>
+          <p class="section-tag" data-i18n="testimonials_tag">
+            દર્દીઓના પ્રતિભાવ
+          </p>
+          <h2>
+            <span data-i18n="testimonials_title_1">અમારા દર્દીઓ</span>
+            <span data-i18n="testimonials_title_span">શું કહે છે</span>
+          </h2>
           <p class="section-desc">
-            વધુ પ્રતિભાવ માટે Instagram પર ફૉલો કરો
+            <span data-i18n="testimonials_desc"
+              >વધુ પ્રતિભાવ માટે Instagram પર ફૉલો કરો</span
+            >
             <a
               href="https://www.instagram.com/anant_homoeopathy"
               target="_blank"
@@ -401,16 +540,16 @@
             <div class="testimonial-stars">
               &#9733;&#9733;&#9733;&#9733;&#9733;
             </div>
-            <p class="testimonial-text">
+            <p class="testimonial-text" data-i18n="testimonial1_text">
               "મને 5 વર્ષથી ક્રોનિક માઈગ્રેન હતું. અનંત હોમિયોપેથીમાં માત્ર 3
               મહિનાની સારવાર પછી, મારું માઈગ્રેન સંપૂર્ણપણે બંધ થઈ ગયું. ડૉ.
               મકવાણાની ખૂબ ભલામણ કરું છું!"
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">ર</div>
+              <div class="author-avatar"><img src="assets/images/logo.jpeg" alt="Anant Homoeopathy" /></div>
               <div>
-                <strong>રાજેશ પ.</strong>
-                <span>માઈગ્રેન દર્દી</span>
+                <strong data-i18n="testimonial1_name">રાજેશ પ.</strong>
+                <span data-i18n="testimonial1_role">માઈગ્રેન દર્દી</span>
               </div>
             </div>
           </div>
@@ -418,16 +557,16 @@
             <div class="testimonial-stars">
               &#9733;&#9733;&#9733;&#9733;&#9733;
             </div>
-            <p class="testimonial-text">
+            <p class="testimonial-text" data-i18n="testimonial2_text">
               "મારી દીકરીને બાળપણથી ગંભીર ચામડીની એલર્જી હતી. ડૉ. જીગ્નેશની
               સારવારે તેને કોઈ આડઅસર વિના સંપૂર્ણપણે સાજી કરી. કુદરતી ઉપચાર
               અભિગમ માટે અમે ખૂબ આભારી છીએ."
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">મ</div>
+              <div class="author-avatar"><img src="assets/images/logo.jpeg" alt="Anant Homoeopathy" /></div>
               <div>
-                <strong>મીના સ.</strong>
-                <span>એલર્જી દર્દીના માતા</span>
+                <strong data-i18n="testimonial2_name">મીના સ.</strong>
+                <span data-i18n="testimonial2_role">એલર્જી દર્દીના માતા</span>
               </div>
             </div>
           </div>
@@ -435,16 +574,16 @@
             <div class="testimonial-stars">
               &#9733;&#9733;&#9733;&#9733;&#9733;
             </div>
-            <p class="testimonial-text">
+            <p class="testimonial-text" data-i18n="testimonial3_text">
               "મને હરસ માટે ઓપરેશનની સલાહ આપવામાં આવી હતી, પરંતુ આ ક્લિનિકમાં
               હોમિયોપેથિક સારવારથી મને સંપૂર્ણ રાહત મળી. ડૉક્ટર ખૂબ ધીરજથી બધું
               સમજાવે છે. સુરતનું શ્રેષ્ઠ હોમિયોપેથી ક્લિનિક!"
             </p>
             <div class="testimonial-author">
-              <div class="author-avatar">ક</div>
+              <div class="author-avatar"><img src="assets/images/logo.jpeg" alt="Anant Homoeopathy" /></div>
               <div>
-                <strong>કિશન દ.</strong>
-                <span>હરસ-મસા દર્દી</span>
+                <strong data-i18n="testimonial3_name">કિશન દ.</strong>
+                <span data-i18n="testimonial3_role">હરસ-મસા દર્દી</span>
               </div>
             </div>
           </div>
@@ -457,60 +596,66 @@
       <div class="container">
         <div class="appointment-grid">
           <div class="appointment-info">
-            <p class="section-tag">Contact Us</p>
-            <h2>એપોઇન્ટમેન્ટ <span>બુક કરો</span></h2>
-            <p>
+            <p class="section-tag" data-i18n="appointment_tag">Contact Us</p>
+            <h2>
+              <span data-i18n="appointment_title_1">એપોઇન્ટમેન્ટ</span>
+              <span data-i18n="appointment_title_span">બુક કરો</span>
+            </h2>
+            <p data-i18n="appointment_desc">
               ડૉ. જીગ્નેશ મકવાણા સાથે પરામર્શ માટે સમય લો. ફોન કરો અથવા ફોર્મ
               ભરો. ક્લિનિક સમય દરમ્યાન વૉક-ઈન પણ આવકાર્ય છે.
             </p>
-            <p class="info-note">
+            <p class="info-note" data-i18n-html="appointment_note">
               &#128221; તમને જે તકલીફ હોય એ કહી શકો છો અને રીપોર્ટસ મોકલી શકો
               છો!
             </p>
             <div class="clinic-hours">
-              <h4>&#128338; ક્લિનિક સમય</h4>
+              <h4 data-i18n-html="clinic_hours_title">&#128338; ક્લિનિક સમય</h4>
               <div class="hours-row">
-                <span>સવારે</span>
-                <strong>9:30 થી 1:30</strong>
+                <span data-i18n="hours_morning">સવારે</span>
+                <strong data-i18n="hours_morning_time">9:30 થી 1:30</strong>
               </div>
               <div class="hours-row">
-                <span>સાંજે</span>
-                <strong>4:30 થી 8:30</strong>
+                <span data-i18n="hours_evening">સાંજે</span>
+                <strong data-i18n="hours_evening_time">4:30 થી 8:30</strong>
               </div>
               <div class="hours-row">
-                <span>રવિવાર</span>
-                <strong>એપોઇન્ટમેન્ટ દ્વારા</strong>
+                <span data-i18n="hours_sunday">રવિવાર</span>
+                <strong data-i18n="hours_sunday_time"
+                  >એપોઇન્ટમેન્ટ દ્વારા</strong
+                >
               </div>
             </div>
             <div class="quick-contact">
               <a href="tel:+919773273169" class="quick-link">
                 <span class="qc-icon">&#128222;</span>
                 <div>
-                  <small>ફોન કરો</small>
+                  <small data-i18n="quick_call">ફોન કરો</small>
                   <strong>+91 97732 73169</strong>
                 </div>
               </a>
               <a
-                href="https://wa.me/919773273169?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%AB%8D%E0%AA%A4%E0%AB%87%20%E0%AA%A1%E0%AB%89.%20%E0%AA%9C%E0%AB%80%E0%AA%97%E0%AB%8D%E0%AA%A8%E0%AB%87%E0%AA%B6%2C%20%E0%AA%AE%E0%AA%BE%E0%AA%B0%E0%AB%87%20%E0%AA%8F%E0%AA%AA%E0%AB%8B%E0%AA%87%E0%AA%A8%E0%AB%8D%E0%AA%9F%E0%AA%AE%E0%AB%87%E0%AA%A8%E0%AB%8D%E0%AA%9F%20%E0%AA%AC%E0%AB%81%E0%AA%95%20%E0%AA%95%E0%AA%B0%E0%AA%B5%E0%AB%80%20%E0%AA%9B%E0%AB%87."
+                href="https://wa.me/919274743169?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%AB%8D%E0%AA%A4%E0%AB%87%20%E0%AA%A1%E0%AB%89.%20%E0%AA%9C%E0%AB%80%E0%AA%97%E0%AB%8D%E0%AA%A8%E0%AB%87%E0%AA%B6%2C%20%E0%AA%AE%E0%AA%BE%E0%AA%B0%E0%AB%87%20%E0%AA%8F%E0%AA%AA%E0%AB%8B%E0%AA%87%E0%AA%A8%E0%AB%8D%E0%AA%9F%E0%AA%AE%E0%AB%87%E0%AA%A8%E0%AB%8D%E0%AA%9F%20%E0%AA%AC%E0%AB%81%E0%AA%95%20%E0%AA%95%E0%AA%B0%E0%AA%B5%E0%AB%80%20%E0%AA%9B%E0%AB%87."
                 target="_blank"
                 rel="noopener"
                 class="quick-link whatsapp"
               >
                 <span class="qc-icon">&#128172;</span>
                 <div>
-                  <small>WhatsApp</small>
-                  <strong>+91 97732 73169</strong>
+                  <small data-i18n="quick_whatsapp">WhatsApp</small>
+                  <strong>+91 92747 43169</strong>
                 </div>
               </a>
             </div>
           </div>
           <div class="appointment-form-wrapper">
             <form id="appointmentForm" class="appointment-form">
-              <h3>એપોઇન્ટમેન્ટ માટે</h3>
+              <h3 data-i18n="form_title">એપોઇન્ટમેન્ટ માટે</h3>
               <div class="form-group">
                 <input
                   type="text"
                   id="patientName"
+                  data-i18n-placeholder="form_name_placeholder"
                   placeholder="તમારું પૂરું નામ"
                   required
                 />
@@ -519,6 +664,7 @@
                 <input
                   type="tel"
                   id="patientPhone"
+                  data-i18n-placeholder="form_phone_placeholder"
                   placeholder="મોબાઈલ નંબર"
                   required
                 />
@@ -527,20 +673,26 @@
                 <input
                   type="email"
                   id="patientEmail"
+                  data-i18n-placeholder="form_email_placeholder"
                   placeholder="ઈમેઈલ (વૈકલ્પિક)"
                 />
               </div>
               <div class="form-group">
                 <textarea
                   id="patientMessage"
+                  data-i18n-placeholder="form_message_placeholder"
                   placeholder="તમારી તકલીફ વિશે ટૂંકમાં જણાવો"
                   rows="4"
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-full">
+              <button
+                type="submit"
+                class="btn btn-primary btn-full"
+                data-i18n="form_submit"
+              >
                 WhatsApp દ્વારા મોકલો
               </button>
-              <p class="form-note">
+              <p class="form-note" data-i18n="form_note">
                 તમારો મેસેજ ઝડપી જવાબ માટે અમારા WhatsApp પર મોકલાશે.
               </p>
             </form>
@@ -553,16 +705,16 @@
     <section id="contact" class="section contact">
       <div class="container">
         <div class="section-header">
-          <p class="section-tag">Visit Us</p>
-          <h2><span>Our Location</span></h2>
+          <p class="section-tag" data-i18n="contact_tag">Visit Us</p>
+          <h2><span data-i18n="contact_title">Our Location</span></h2>
         </div>
         <div class="contact-grid">
           <div class="contact-details">
             <div class="contact-card">
               <div class="contact-icon">&#128205;</div>
               <div>
-                <h4>સરનામું</h4>
-                <p>
+                <h4 data-i18n="contact_address_title">સરનામું</h4>
+                <p data-i18n-html="contact_address">
                   108, લા સીટાડેલ કોમ્પલેક્ષ, ગંગા હોટલ ની સામે,<br />સીએનજી
                   પેટ્રોલ પંપ ની બાજુમાં,<br />કાંગારૂ સર્કલ, પર્વત પાટિયા
                   રોડ,<br />સુરત - 395010, ગુજરાત
@@ -570,17 +722,17 @@
               </div>
             </div>
             <div class="contact-card">
-              <div class="contact-icon">&#128222;</div>
+              <div class="contact-icon">📞</div>
               <div>
-                <h4>ફોન</h4>
-                <p><a href="tel:+919773273169">+91 97732 73169</a></p>
-                <p><a href="tel:+919274743169">+91 92747 43169</a></p>
+                <h4 data-i18n="contact_phone_title">ફોન</h4>
+                <p><a href="tel:+919773273169">📞 +91 97732 73169</a></p>
+                <p><a href="https://wa.me/919274743169" target="_blank" rel="noopener">💬 +91 92747 43169 (WhatsApp)</a></p>
               </div>
             </div>
             <div class="contact-card">
               <div class="contact-icon">&#9993;</div>
               <div>
-                <h4>ઈમેઈલ</h4>
+                <h4 data-i18n="contact_email_title">ઈમેઈલ</h4>
                 <p>
                   <a href="mailto:ananthomeopathy01@gmail.com"
                     >ananthomeopathy01@gmail.com</a
@@ -591,8 +743,8 @@
             <div class="contact-card">
               <div class="contact-icon">&#128338;</div>
               <div>
-                <h4>કાર્ય સમય</h4>
-                <p>
+                <h4 data-i18n="contact_hours_title">કાર્ય સમય</h4>
+                <p data-i18n-html="contact_hours">
                   સોમ - શનિ: સવારે 9:30 થી 1:30<br />સોમ - શનિ: સાંજે 4:30 થી
                   8:30<br />રવિવાર: એપોઇન્ટમેન્ટ દ્વારા
                 </p>
@@ -601,8 +753,8 @@
             <div class="contact-card">
               <div class="contact-icon">&#128241;</div>
               <div>
-                <h4>ઓનલાઇન કન્સલ્ટેશન</h4>
-                <p>
+                <h4 data-i18n="contact_online_title">ઓનલાઇન કન્સલ્ટેશન</h4>
+                <p data-i18n="contact_online_desc">
                   સુરતની બહારના દર્દીઓ માટે ઓનલાઇન કન્સલ્ટેશનની સુવિધા ઉપલબ્ધ
                   છે.
                 </p>
@@ -644,7 +796,7 @@
                 </svg>
               </a>
               <a
-                href="https://wa.me/919773273169"
+                href="https://wa.me/919274743169"
                 target="_blank"
                 rel="noopener"
                 aria-label="WhatsApp"
@@ -683,7 +835,7 @@
           </div>
           <div class="contact-map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.3!2d72.8191!3d21.1862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f7c26c3e415%3A0x9d2b5c1b0e0b0e0!2sLa%20Citadel!5e0!3m2!1sen!2sin!4v1711000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.3!2d72.8191!3d21.1862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04ffe658808cf%3A0xdba7a8f9653215a5!2sANANT%20HOMEOPATHY!5e0!3m2!1sen!2sin!4v1711000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style="border: 0; border-radius: 12px"
@@ -699,7 +851,9 @@
               rel="noopener"
               class="map-link btn btn-primary"
             >
-              &#128205; Google Maps પર ખોલો
+              <span data-i18n-html="contact_map_btn"
+                >&#128205; Google Maps પર ખોલો</span
+              >
             </a>
           </div>
         </div>
@@ -713,9 +867,9 @@
           <div class="footer-about">
             <div class="footer-logo">
               <img src="assets/images/logo.jpeg" alt="અનંત હોમિયોપેથી" />
-              <span>અનંત હોમિયોપેથી</span>
+              <span data-i18n="footer_name">અનંત હોમિયોપેથી</span>
             </div>
-            <p>
+            <p data-i18n="footer_about">
               સુરતમાં સુરક્ષિત, કુદરતી અને અસરકારક હોમિયોપેથિક સારવાર. કુદરતી
               ઉપચારની તમારી સફર અહીંથી શરૂ થાય છે.
             </p>
@@ -739,7 +893,7 @@
                 </svg>
               </a>
               <a
-                href="https://wa.me/919773273169"
+                href="https://wa.me/919274743169"
                 target="_blank"
                 rel="noopener"
                 aria-label="WhatsApp"
@@ -759,30 +913,48 @@
             </div>
           </div>
           <div class="footer-links">
-            <h4>Quick Links</h4>
+            <h4 data-i18n="footer_quick_links">Quick Links</h4>
             <ul>
-              <li><a href="#home">હોમ</a></li>
-              <li><a href="#about">ડૉક્ટર વિશે</a></li>
-              <li><a href="#services">સેવાઓ</a></li>
-              <li><a href="#blog">બ્લોગ</a></li>
-              <li><a href="#videos">વિડિયો</a></li>
-              <li><a href="#appointment">એપોઇન્ટમેન્ટ</a></li>
+              <li><a href="#home" data-i18n="footer_home">હોમ</a></li>
+              <li>
+                <a href="#about" data-i18n="footer_doctor">ડૉક્ટર વિશે</a>
+              </li>
+              <li><a href="#services" data-i18n="footer_services">સેવાઓ</a></li>
+              <li><a href="#blog" data-i18n="footer_blog">બ્લોગ</a></li>
+              <li><a href="#videos" data-i18n="footer_videos">વિડિયો</a></li>
+              <li>
+                <a href="#appointment" data-i18n="footer_appointment"
+                  >એપોઇન્ટમેન્ટ</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-links">
-            <h4>Treatment</h4>
+            <h4 data-i18n="footer_treatment">Treatment</h4>
             <ul>
-              <li><a href="#services">માઈગ્રેન</a></li>
-              <li><a href="#services">એલર્જી-અસ્થમા</a></li>
-              <li><a href="#services">ચામડીના રોગ</a></li>
-              <li><a href="#services">સાંધાનો દુખાવો</a></li>
-              <li><a href="#services">પેટના રોગો</a></li>
-              <li><a href="#services">સ્ત્રી રોગ</a></li>
+              <li>
+                <a href="#services" data-i18n="footer_migraine">માઈગ્રેન</a>
+              </li>
+              <li>
+                <a href="#services" data-i18n="footer_allergy">એલર્જી-અસ્થમા</a>
+              </li>
+              <li>
+                <a href="#services" data-i18n="footer_skin">ચામડીના રોગ</a>
+              </li>
+              <li>
+                <a href="#services" data-i18n="footer_joints">સાંધાનો દુખાવો</a>
+              </li>
+              <li>
+                <a href="#services" data-i18n="footer_stomach">પેટના રોગો</a>
+              </li>
+              <li>
+                <a href="#services" data-i18n="footer_gynec">સ્ત્રી રોગ</a>
+              </li>
             </ul>
           </div>
           <div class="footer-contact">
-            <h4>Contact Information</h4>
-            <p>
+            <h4 data-i18n="footer_contact_info">Contact Information</h4>
+            <p data-i18n-html="footer_address">
               108, લા સીટાડેલ કોમ્પલેક્ષ,<br />પર્વત પાટિયા રોડ, સુરત - 395010
             </p>
             <p><a href="tel:+919773273169">+91 97732 73169</a></p>
@@ -794,14 +966,16 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 Anant Homeopathy Clinic. All rights reserved.</p>
+          <p data-i18n-html="footer_copyright">
+            &copy; 2026 Anant Homeopathy Clinic. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
 
     <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
     <a
-      href="https://wa.me/919773273169?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%AB%8D%E0%AA%A4%E0%AB%87%20%E0%AA%A1%E0%AB%89.%20%E0%AA%9C%E0%AB%80%E0%AA%97%E0%AB%8D%E0%AA%A8%E0%AB%87%E0%AA%B6%2C%20%E0%AA%AE%E0%AA%BE%E0%AA%B0%E0%AB%87%20%E0%AA%8F%E0%AA%AA%E0%AB%8B%E0%AA%87%E0%AA%A8%E0%AB%8D%E0%AA%9F%E0%AA%AE%E0%AB%87%E0%AA%A8%E0%AB%8D%E0%AA%9F%20%E0%AA%AC%E0%AB%81%E0%AA%95%20%E0%AA%95%E0%AA%B0%E0%AA%B5%E0%AB%80%20%E0%AA%9B%E0%AB%87."
+      href="https://wa.me/919274743169?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%AB%8D%E0%AA%A4%E0%AB%87%20%E0%AA%A1%E0%AB%89.%20%E0%AA%9C%E0%AB%80%E0%AA%97%E0%AB%8D%E0%AA%A8%E0%AB%87%E0%AA%B6%2C%20%E0%AA%AE%E0%AA%BE%E0%AA%B0%E0%AB%87%20%E0%AA%8F%E0%AA%AA%E0%AB%8B%E0%AA%87%E0%AA%A8%E0%AB%8D%E0%AA%9F%E0%AA%AE%E0%AB%87%E0%AA%A8%E0%AB%8D%E0%AA%9F%20%E0%AA%AC%E0%AB%81%E0%AA%95%20%E0%AA%95%E0%AA%B0%E0%AA%B5%E0%AB%80%20%E0%AA%9B%E0%AB%87."
       class="whatsapp-float"
       target="_blank"
       rel="noopener"
@@ -835,6 +1009,7 @@
             onclick="
               document.getElementById('blogModal').classList.remove('active')
             "
+            data-i18n="blog_modal_cta"
             >એપોઇન્ટમેન્ટ બુક કરો</a
           >
         </div>

@@ -2,7 +2,72 @@
    ANANT HOMOEOPATHY CLINIC - MAIN JS
    ============================================ */
 
+// ---------- Language System ----------
+let currentLang = localStorage.getItem('lang') || 'gu';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+
+    const t = translations[lang];
+    if (!t) return;
+
+    // Update all data-i18n elements (textContent)
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) {
+            el.textContent = t[key];
+        }
+    });
+
+    // Update all data-i18n-html elements (innerHTML for content with HTML entities/tags)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (t[key] !== undefined) {
+            el.innerHTML = t[key];
+        }
+    });
+
+    // Update all data-i18n-placeholder elements
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key] !== undefined) {
+            el.placeholder = t[key];
+        }
+    });
+
+    // Update language switch buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    // Re-render dynamic blog content if posts are loaded
+    if (blogPostsData.length > 0) {
+        renderBlogPosts();
+    }
+}
+
+function getCurrentLang() {
+    return currentLang;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    // ---------- Language Switch ----------
+    const langSwitch = document.getElementById('langSwitch');
+    if (langSwitch) {
+        langSwitch.addEventListener('click', (e) => {
+            const btn = e.target.closest('.lang-btn');
+            if (btn) {
+                const lang = btn.getAttribute('data-lang');
+                setLanguage(lang);
+            }
+        });
+    }
+
+    // Apply saved language on load
+    setLanguage(currentLang);
 
     // ---------- Mobile Menu Toggle ----------
     const mobileToggle = document.getElementById('mobileToggle');
@@ -86,21 +151,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('patientEmail').value.trim();
             const message = document.getElementById('patientMessage').value.trim();
 
+            const t = translations[getCurrentLang()];
+
             if (!name || !phone) {
-                alert('કૃપા કરીને તમારું નામ અને મોબાઈલ નંબર દાખલ કરો.');
+                alert(t.form_validation_alert);
                 return;
             }
 
-            let text = `નમસ્તે ડૉ. જીગ્નેશ,\n\n`;
-            text += `મારે એપોઇન્ટમેન્ટ બુક કરવી છે.\n\n`;
-            text += `*નામ:* ${name}\n`;
-            text += `*ફોન:* ${phone}\n`;
-            if (email) text += `*ઈમેઈલ:* ${email}\n`;
-            if (message) text += `*તકલીફ:* ${message}\n`;
-            text += `\nઆભાર.`;
+            let text = `${t.wa_greeting}\n\n`;
+            text += `${t.wa_appointment}\n\n`;
+            text += `*${t.wa_name}* ${name}\n`;
+            text += `*${t.wa_phone}* ${phone}\n`;
+            if (email) text += `*${t.wa_email}* ${email}\n`;
+            if (message) text += `*${t.wa_problem}* ${message}\n`;
+            text += `\n${t.wa_thanks}`;
 
             const encoded = encodeURIComponent(text);
-            window.open(`https://wa.me/919773273169?text=${encoded}`, '_blank');
+            window.open(`https://wa.me/919274743169?text=${encoded}`, '_blank');
         });
     }
 
@@ -151,6 +218,17 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================================
 // BLOG SYSTEM - Loads from blog/posts.json
 // ============================================
+let blogPostsData = []; // Store globally for language switching
+
+// Get localized blog field based on current language
+function getBlogField(post, field) {
+    const lang = getCurrentLang();
+    if (lang === 'en' && post[field + '_en']) {
+        return post[field + '_en'];
+    }
+    return post[field] || '';
+}
+
 async function loadBlogPosts() {
     const grid = document.getElementById('blogGrid');
     const empty = document.getElementById('blogEmpty');
@@ -160,6 +238,7 @@ async function loadBlogPosts() {
         if (!response.ok) throw new Error('No posts file');
 
         const posts = await response.json();
+        blogPostsData = posts;
 
         if (!posts || posts.length === 0) {
             grid.style.display = 'none';
@@ -167,50 +246,59 @@ async function loadBlogPosts() {
             return;
         }
 
-        grid.innerHTML = '';
-
-        posts.forEach((post, index) => {
-            const card = document.createElement('div');
-            card.className = 'blog-card reveal';
-
-            const imgSrc = post.image || 'assets/images/logo.jpeg';
-            const date = post.date || '';
-            const hasContent = post.content && post.content.length > 0;
-
-            card.innerHTML = `
-                <img src="${imgSrc}" alt="${post.title}" class="blog-card-img" loading="lazy">
-                <div class="blog-card-body">
-                    <p class="blog-card-date">${date}</p>
-                    <h4>${post.title}</h4>
-                    <p>${post.excerpt}</p>
-                    <a href="#" class="blog-read-more" data-index="${index}">વધુ વાંચો &rarr;</a>
-                </div>
-            `;
-
-            // Add click handler for Read More
-            card.querySelector('.blog-read-more').addEventListener('click', (e) => {
-                e.preventDefault();
-                openBlogModal(post);
-            });
-
-            grid.appendChild(card);
-        });
-
-        observeRevealElements('.blog-card.reveal');
+        renderBlogPosts();
 
     } catch {
+        const t = translations[getCurrentLang()];
         grid.innerHTML = `
             <div class="blog-card reveal active">
                 <img src="assets/images/logo.jpeg" alt="Blog" class="blog-card-img" loading="lazy">
                 <div class="blog-card-body">
-                    <p class="blog-card-date">ટૂંક સમયમાં</p>
-                    <h4>હોમિયોપેથી: કુદરતી ઉપચારનો માર્ગ</h4>
-                    <p>હોમિયોપેથીના સિદ્ધાંતો વિશે જાણો અને કેવી રીતે તે ક્રોનિક રોગોની કુદરતી સારવાર કરે છે.</p>
-                    <span class="blog-read-more">ટૂંક સમયમાં &rarr;</span>
+                    <p class="blog-card-date">${t.blog_coming_soon}</p>
+                    <h4>${t.blog_fallback_title}</h4>
+                    <p>${t.blog_fallback_desc}</p>
+                    <span class="blog-read-more">${t.blog_coming_soon} &rarr;</span>
                 </div>
             </div>
         `;
     }
+}
+
+function renderBlogPosts() {
+    const grid = document.getElementById('blogGrid');
+    if (!grid || blogPostsData.length === 0) return;
+
+    const t = translations[getCurrentLang()];
+    grid.innerHTML = '';
+
+    blogPostsData.forEach((post, index) => {
+        const card = document.createElement('div');
+        card.className = 'blog-card reveal';
+
+        const imgSrc = post.image || 'assets/images/logo.jpeg';
+        const title = getBlogField(post, 'title');
+        const excerpt = getBlogField(post, 'excerpt');
+        const date = getBlogField(post, 'date');
+
+        card.innerHTML = `
+            <img src="${imgSrc}" alt="${title}" class="blog-card-img" loading="lazy">
+            <div class="blog-card-body">
+                <p class="blog-card-date">${date}</p>
+                <h4>${title}</h4>
+                <p>${excerpt}</p>
+                <a href="#" class="blog-read-more" data-index="${index}">${t.blog_read_more} &rarr;</a>
+            </div>
+        `;
+
+        card.querySelector('.blog-read-more').addEventListener('click', (e) => {
+            e.preventDefault();
+            openBlogModal(post);
+        });
+
+        grid.appendChild(card);
+    });
+
+    observeRevealElements('.blog-card.reveal');
 }
 
 // Open blog modal with full content
@@ -221,11 +309,15 @@ function openBlogModal(post) {
     const title = document.getElementById('blogModalTitle');
     const text = document.getElementById('blogModalText');
 
+    const postTitle = getBlogField(post, 'title');
+    const postDate = getBlogField(post, 'date');
+    const postContent = getBlogField(post, 'content') || getBlogField(post, 'excerpt');
+
     img.src = post.image || 'assets/images/logo.jpeg';
-    img.alt = post.title;
-    date.textContent = post.date || '';
-    title.textContent = post.title;
-    text.textContent = post.content || post.excerpt;
+    img.alt = postTitle;
+    date.textContent = postDate;
+    title.textContent = postTitle;
+    text.textContent = postContent;
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -278,13 +370,14 @@ async function loadVideos() {
         observeRevealElements('.video-card.reveal');
 
     } catch {
+        const t = translations[getCurrentLang()];
         grid.innerHTML = `
             <div class="video-card reveal active">
                 <div style="width:100%;aspect-ratio:16/9;background:var(--primary-bg);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:1rem;">
-                    વિડિયો ટૂંક સમયમાં
+                    ${t.videos_fallback}
                 </div>
                 <div class="video-card-body">
-                    <h4>આરોગ્ય ટિપ્સ માટે અમારી YouTube ચેનલ સબ્સ્ક્રાઇબ કરો</h4>
+                    <h4>${t.videos_fallback_title}</h4>
                 </div>
             </div>
         `;
@@ -338,10 +431,11 @@ async function loadReels() {
         observeRevealElements('.reel-card.reveal');
 
     } catch {
+        const t = translations[getCurrentLang()];
         grid.innerHTML = `
             <div class="reel-card reveal active" style="text-align:center;padding:40px;">
-                <p style="color:var(--text-muted);">રીલ્સ ટૂંક સમયમાં આવશે!</p>
-                <a href="https://www.instagram.com/anant_homoeopathy" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:16px;">Instagram પર ફૉલો કરો</a>
+                <p style="color:var(--text-muted);">${t.reels_fallback}</p>
+                <a href="https://www.instagram.com/anant_homoeopathy" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:16px;">${t.reels_follow}</a>
             </div>
         `;
     }
