@@ -1,4 +1,4 @@
-# અનંત હોમિયોપેથી ક્લિનિક - Website
+# અનંત હોમિયોપેથી ક્લિનિક
 
 Official website for **અનંત હોમિયોપેથી ક્લિનિક** (Anant Homoeopathy Clinic) by **ડૉ. જીગ્નેશ મકવાણા** (B.H.M.S., S.C.P.H.).
 
