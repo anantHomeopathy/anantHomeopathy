@@ -12,7 +12,7 @@ Hosted on GitHub Pages: `https://ananthomeopathy.github.io/anantHomeopathy/`
 
 ```
 Anant_homeopathy_clinic/
-├── index.html              # Main website page (Gujarati)
+├── index.html              # Main website page
 ├── css/
 │   └── style.css           # All styles
 ├── js/
@@ -23,9 +23,6 @@ Anant_homeopathy_clinic/
 │   └── posts.json          # Blog posts data (EDIT THIS)
 ├── assets/
 │   └── images/             # All images
-│       ├── logo.jpeg        # Clinic logo
-│       ├── doctor.jpg       # Doctor photo (ADD THIS)
-│       └── visiting-card.jpeg
 └── README.md               # This file
 ```
 ---
