@@ -151,15 +151,15 @@ const translations = {
     testimonials_desc: "વધુ પ્રતિભાવ માટે Instagram પર ફૉલો કરો",
     testimonial1_text:
       "મને 5 વર્ષથી ક્રોનિક માઈગ્રેન હતું. અનંત હોમિયોપેથીમાં માત્ર 3 મહિનાની સારવાર પછી, મારું માઈગ્રેન સંપૂર્ણપણે બંધ થઈ ગયું. ડૉ. મકવાણાની ખૂબ ભલામણ કરું છું!",
-    testimonial1_name: "રાજેશ પ.",
+    testimonial1_name: "શિવમભાઈ દેસાઇ",
     testimonial1_role: "માઈગ્રેન દર્દી",
     testimonial2_text:
       "મારી દીકરીને બાળપણથી ગંભીર ચામડીની એલર્જી હતી. ડૉ. જીગ્નેશની સારવારે તેને કોઈ આડઅસર વિના સંપૂર્ણપણે સાજી કરી. કુદરતી ઉપચાર અભિગમ માટે અમે ખૂબ આભારી છીએ.",
-    testimonial2_name: "મીના સ.",
+    testimonial2_name: "રિચા રાજપૂત",
     testimonial2_role: "એલર્જી દર્દીના માતા",
     testimonial3_text:
       "મને હરસ માટે ઓપરેશનની સલાહ આપવામાં આવી હતી, પરંતુ આ ક્લિનિકમાં હોમિયોપેથિક સારવારથી મને સંપૂર્ણ રાહત મળી. ડૉક્ટર ખૂબ ધીરજથી બધું સમજાવે છે. સુરતનું શ્રેષ્ઠ હોમિયોપેથી ક્લિનિક!",
-    testimonial3_name: "કિશન દ.",
+    testimonial3_name: "વિશાલ રાઠોડ",
     testimonial3_role: "હરસ-મસા દર્દી",
 
     // Appointment
@@ -392,15 +392,15 @@ const translations = {
     testimonials_desc: "Follow us on Instagram for more reviews",
     testimonial1_text:
       "I had chronic migraines for 5 years. After just 3 months of treatment at Anant Homoeopathy, my migraines completely stopped. Highly recommend Dr. Makwana!",
-    testimonial1_name: "Rajesh P.",
+    testimonial1_name: "Shivambhai Desai",
     testimonial1_role: "Migraine Patient",
     testimonial2_text:
       "My daughter had severe skin allergies since childhood. Dr. Jignesh's treatment cured her completely without any side effects. We are very grateful for the natural healing approach.",
-    testimonial2_name: "Meena S.",
+    testimonial2_name: "Riya Rajput",
     testimonial2_role: "Mother of Allergy Patient",
     testimonial3_text:
       "I was advised surgery for piles, but homoeopathic treatment at this clinic gave me complete relief. The doctor explains everything very patiently. Best homoeopathy clinic in Surat!",
-    testimonial3_name: "Kishan D.",
+    testimonial3_name: "Vishal Rathod",
     testimonial3_role: "Piles Patient",
 
     // Appointment
