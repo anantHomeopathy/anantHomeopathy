@@ -47,7 +47,7 @@ const translations = {
     doctor_title:
       "B.H.M.S. (કન્સલ્ટિંગ હોમિયોપેથ) | S.C.P.H. (ICHM United Nation)",
     about_p1:
-      "ડૉ. જીગ્નેશ મકવાણા એક સમર્પિત અને અનુભવી હોમિયોપેથિક ચિકિત્સક છે જે સર્વગ્રાહી અને વ્યક્તિગત આરોગ્ય સંભાળ પૂરી પાડવા માટે પ્રતિબદ્ધ છે. ક્લાસિકલ હોમિયોપેથીમાં મજબૂત આધાર અને વર્ષોના ક્લિનિકલ અનુભવ સાથે, તેઓ ક્રોનિક રોગો, એલર્જી, માઈગ્રેન અને લાંબા ગાળાની સારવારની જરૂર હોય તેવી બીમારીઓમાં નિષ્ણાત છે.",
+      "છેલ્લા 4+ વર્ષથી Anant Homeopathy દ્વારા હજારો દર્દીઓ માટે આશા અને વિશ્વાસનું કેન્દ્ર બનીને નિષ્ઠાપૂર્વક સેવા આપી રહ્યા છીએ. અહીં માત્ર રોગમાં થોડા સમય માટે રાહત આપવા કે રોગ ને દબાવવામાં નથી આવતો, પરંતુ દર્દીને સંપૂર્ણ રીતે સમજવામાં આવે છે. દરેક દર્દી માટે વ્યક્તિગત (Personalized) અને મૂળ કારણ આધારિત સારવાર આપવામાં આવે છે, જેથી રોગને જડથી દૂર કરી શકાય.,"
     about_p2:
       "અનંત હોમિયોપેથી ક્લિનિકમાં, અમે રોગના લક્ષણો નહીં, પરંતુ મૂળ કારણની સારવાર કરીએ છીએ. અમારો અભિગમ પરંપરાગત હોમિયોપેથિક સિદ્ધાંતોને આધુનિક ડાયગ્નોસ્ટિક સમજ સાથે જોડીને અસરકારક, આડઅસર-મુક્ત સારવાર આપે છે.",
     about_p3: "સુરતની બહારના દર્દીઓ માટે ઓનલાઇન કન્સલ્ટેશનની સુવિધા ઉપલબ્ધ છે.",
@@ -289,7 +289,7 @@ const translations = {
     doctor_title:
       "B.H.M.S. (Consulting Homoeopath) | S.C.P.H. (ICHM United Nation)",
     about_p1:
-      "Dr. Jignesh Makwana is a dedicated and experienced homoeopathic practitioner committed to providing holistic and personalized healthcare. With a strong foundation in classical homoeopathy and years of clinical experience, he specializes in chronic diseases, allergies, migraines, and conditions requiring long-term treatment.",
+      "For the past 4+ years, Anant Homeopathy has been serving as a center of hope and trust for thousands of patients with dedication. Here, the focus is not just on providing temporary relief from diseases or suppressing symptoms, but on understanding the patient as a whole. Each patient receives personalized, root-cause-based treatment, so that the disease can be eliminated from its origin."
     about_p2:
       "At Anant Homoeopathy Clinic, we treat not just the symptoms but the root cause of the disease. Our approach combines traditional homoeopathic principles with modern diagnostic understanding to provide effective, side-effect-free treatment.",
     about_p3: "Online consultation available for patients outside Surat.",
