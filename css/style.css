@@ -966,6 +966,7 @@ ul {
   color: var(--text-muted);
 }
 
+
 /* ============================================
    APPOINTMENT
    ============================================ */
@@ -975,31 +976,25 @@ ul {
 
 .appointment-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 36px;
+  align-items: stretch;
 }
 
-.appointment-info h2 {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  margin-bottom: 16px;
-}
-
-.appointment-info h2 span {
-  color: var(--primary);
-}
-
-.appointment-info > p {
-  color: var(--text-light);
-  margin-bottom: 28px;
+.appointment-info {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .clinic-hours {
-  background: var(--white);
+  background: var(--primary-bg);
   border-radius: var(--radius);
   padding: 24px;
-  margin-bottom: 28px;
   border: 1px solid var(--border);
 }
 
